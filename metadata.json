@@ -1,9 +1,9 @@
 {
-    "Identifier": "",
-    "Slug": "",
-    "Status": "",
-    "Title": "",
-    "Description": "",
+    "Identifier": "eos2hzy",
+    "Slug": "pubchem-sampler",
+    "Status": "In progress",
+    "Title": "PubChem Molecular Sampler",
+    "Description": "A simple sampler of the PubChem database using their API. It looks for similar molecules to the input molecule and returns a list of 1000 molecules by default. This model has been developed by Ersilia.",
     "Mode": "",
     "Task": [],
     "Input": [],
@@ -12,8 +12,10 @@
     "Output Type": [],
     "Output Shape": "",
     "Interpretation": "",
-    "Tag": [],
-    "Publication": "",
-    "Source Code": "",
-    "License": ""
+    "Tag": [
+        "Similarity"
+    ],
+    "Publication": "https://academic.oup.com/nar/article/51/D1/D1373/6777787",
+    "Source Code": "https://github.com/ersilia-os/chem-sampler/blob/main/chemsampler/samplers/pubchem/sampler.py",
+    "License": "GPL-3.0"
 }
