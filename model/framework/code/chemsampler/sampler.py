@@ -58,7 +58,6 @@ class ChemSampler(object):
             if (t1 - t0) > time_budget_sec:
                 return sampled_smiles
             sampled_smiles.update(self._one_sampler(smiles_list))
-            print(len(sampled_smiles))
         return sampled_smiles
 
     def more(self, Sampler, smiles_list, num_samples=100, time_budget_sec=60):
@@ -69,7 +68,7 @@ class ChemSampler(object):
         self.num_samples = num_samples
         sampled_smiles = self._greedy_sample(smiles_list, num_samples, time_budget_sec, Sampler)
         sampled_smiles = list(sampled_smiles)
-        print(sampled_smiles)
+        print('greedy smiles list:', sampled_smiles)
         if self.sampled_smiles is None:
             self.sampled_smiles = set(sampled_smiles)
         else:
@@ -198,7 +197,7 @@ class ChemSampler(object):
                 print("Invalid SMILE: {}.".format(smi))
                 smiles_list.remove(smi)
         if Sampler == "all" or Sampler is None:
-        #result is a dict where keys are name of the sampler and values are the sampled smiles
+            # result is a dict where keys are name of the sampler and values are the sampled smiles
             result= {}
             for sampler in (self.samplers_list, 1)[0]:
                 self.Sampler = sampler
@@ -206,7 +205,11 @@ class ChemSampler(object):
                 result_ = self._sample(smiles_list, num_samples, sim_ub, sim_lb, distribution, time_budget_sec, flatten)
                 result[self.Sampler] = result_
         else:
-        #result is a list of sampled smiles
             self.Sampler = Sampler
-            result = self._sample(smiles_list, num_samples, sim_ub, sim_lb, distribution, time_budget_sec, flatten)
-        return result
+            smiles_dict = {}    # in this dictionary, the keys will be the input smiles and the values will be a list of similar smiles
+            for s in smiles_list: 
+                if s not in smiles_dict: 
+                    smiles_dict[s] = self._sample(smiles_list, num_samples, sim_ub, sim_lb, distribution, time_budget_sec, flatten)
+            # result = self._sample(smiles_list, num_samples, sim_ub, sim_lb, distribution, time_budget_sec, flatten)
+        # return result
+        return smiles_dict
