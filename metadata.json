@@ -14,7 +14,6 @@
     "Interpretation": "List of 1000 similar molecules",
     "Tag": [
         "Similarity", 
-        "PubChem"
     ],
     "Publication": "https://academic.oup.com/nar/article/51/D1/D1373/6777787",
     "Source Code": "https://github.com/ersilia-os/chem-sampler/blob/main/chemsampler/samplers/pubchem/sampler.py",
