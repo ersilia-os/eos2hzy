@@ -89,11 +89,11 @@ class Model(object):
             h = next(reader)
             R = []
             for r in reader:
-                R += [
-                    {"outcome": [Float(x) for x in r]}
-                ]  # <-- EDIT: Modify according to type of output (Float, String...)
-        meta = {"outcome": h}
-        result = {"result": R, "meta": meta}
+                R += [{"similarity": [String(x) for x in r]}]
+        result = {
+            "result": R,
+            "meta": {"similarity": h}
+        }
         shutil.rmtree(tmp_folder)
         return result
 
