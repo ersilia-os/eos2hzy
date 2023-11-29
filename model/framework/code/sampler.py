@@ -89,8 +89,8 @@ class PubChemSampler(object):
         sampled_smiles = []
         sampled_smiles += self._sample(origin_smiles)
         sampled_smiles = list(set(sampled_smiles))
-        print(len(sampled_smiles))
         sampled_smiles_ordered = self._sort_smiles(origin_smiles, sampled_smiles)
-        print(len(sampled_smiles_ordered))
         sampled_smiles_selected = sampled_smiles_ordered[:100]
+        if len(sampled_smiles_selected) < 100:
+            sampled_smiles_selected = list(sampled_smiles_selected) + [""]*(100-len(sampled_smiles_selected))
         return sampled_smiles_selected
