@@ -26,7 +26,7 @@ A simple sampler of the PubChem database using their API. It looks for similar m
 ## Ersilia model URLs
 * [GitHub](https://github.com/ersilia-os/eos2hzy)
 * [AWS S3](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2hzy.zip)
-* [DockerHub](https://hub.docker.com/r/ersiliaos/eos2hzy) (AMD64)
+* [DockerHub](https://hub.docker.com/r/ersiliaos/eos2hzy) (AMD64, ARM64)
 
 ## Citation
 
