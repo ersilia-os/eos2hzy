@@ -19,7 +19,7 @@
         "Compound"
     ],
     "Output Dimension": 100,
-    "Output Consistency": "Variable",
+    "Output Consistency": "Fixed",
     "Interpretation": "100 nearest molecules in PubChem",
     "Tag": [
         "Similarity"
