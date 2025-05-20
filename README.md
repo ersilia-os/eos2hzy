@@ -22,7 +22,7 @@ This model was incorporated on 2023-08-10.
 
 ### Output
 - **Output Dimension:** `100`
-- **Output Consistency:** `Variable`
+- **Output Consistency:** `Fixed`
 - **Interpretation:** 100 nearest molecules in PubChem
 
 Below are the **Output Columns** of the model:
