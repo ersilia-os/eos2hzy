@@ -4,6 +4,7 @@ A simple sampler of the PubChem database using their API. It looks for similar m
 
 This model was incorporated on 2023-08-10.
 
+
 ## Information
 ### Identifiers
 - **Ersilia Identifier:** `eos2hzy`
@@ -13,7 +14,7 @@ This model was incorporated on 2023-08-10.
 - **Task:** `Sampling`
 - **Subtask:** `Similarity search`
 - **Biomedical Area:** `Any`
-- **Target Organism:** `Not Applicable`
+- **Target Organism:** `Any`
 - **Tags:** `Similarity`
 
 ### Input
