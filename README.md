@@ -2,8 +2,7 @@
 
 A simple sampler of the PubChem database using their API. It looks for similar molecules to the input molecule and returns a list of 100 molecules by default. This model has been developed by Ersilia and posts queries to an online server.
 
-This model was incorporated on 2023-08-10.
-
+This model was incorporated on 2023-08-10.Last packaged on 2025-12-01.
 
 ## Information
 ### Identifiers
@@ -51,11 +50,11 @@ _10 of 100 columns are shown_
 ### Resource Consumption
 - **Model Size (Mb):** `1`
 - **Environment Size (Mb):** `438`
-- **Image Size (Mb):** `408.53`
+- **Image Size (Mb):** `484.09`
 
 **Computational Performance (seconds):**
-- 10 inputs: `40`
-- 100 inputs: `1084.2`
+- 10 inputs: `30.99`
+- 100 inputs: `372.24`
 - 10000 inputs: `-1`
 
 ### References
