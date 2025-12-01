@@ -45,7 +45,8 @@ class PubChemSampler(object):
             data = reply.json()
             if "PropertyTable" not in data or "Properties" not in data["PropertyTable"]:
                 return []
-            smiles = [d["CanonicalSMILES"] for d in data["PropertyTable"]["Properties"]]
+
+            smiles = [d["ConnectivitySMILES"] for d in data["PropertyTable"]["Properties"]]
             smiles = list(set(smiles))
             return smiles
         except:
