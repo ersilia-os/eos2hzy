@@ -37,6 +37,8 @@
     "License": "GPL-3.0-or-later",
     "Contributor": "GemmaTuron",
     "Incorporation Date": "2023-08-10",
+    "Last Packaging Date": "2025-12-01",
+    "Release": "v1.0.0",
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2hzy.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos2hzy",
     "Docker Architecture": [
@@ -45,10 +47,10 @@
     ],
     "Model Size": 1.0,
     "Environment Size": 438.0,
-    "Image Size": 408.53,
-    "Computational Performance 1": 40.0,
-    "Computational Performance 2": 138.28,
-    "Computational Performance 3": 1084.2,
+    "Image Size": 484.09,
+    "Computational Performance 1": 30.99,
+    "Computational Performance 2": 56.06,
+    "Computational Performance 3": 372.24,
     "Computational Performance 4": -1.0,
     "Computational Performance 5": -1.0
 }
