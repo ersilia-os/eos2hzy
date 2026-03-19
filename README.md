@@ -1,6 +1,6 @@
 # PubChem Molecular Sampler
 
-A simple sampler of the PubChem database using their API. It looks for similar molecules to the input molecule and returns a list of 100 molecules by default. This model has been developed by Ersilia and posts queries to an online server.
+A simple sampler of the PubChem database using their API. It looks for similar molecules (similarity 0.7) to the input molecule and returns a list of maximum 100 molecules by default. This model has been developed by Ersilia and posts queries to an online server.
 
 This model was incorporated on 2023-08-10.Last packaged on 2025-12-01.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2023-08-10.Last packaged on 2025-12-01.
 ### Output
 - **Output Dimension:** `100`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** 100 nearest molecules in PubChem
+- **Interpretation:** Up to 100 nearest molecules in PubChem (similarity >0.7)
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
