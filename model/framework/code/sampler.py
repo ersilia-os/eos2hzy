@@ -1,3 +1,4 @@
+import time
 import requests
 from standardiser import standardise
 from rdkit import Chem
@@ -31,16 +32,21 @@ class PubChemSampler(object):
         """Function adapted from Andrew White's Exmol"""
         url_smiles = urllib.parse.quote(origin_smiles)
         url = f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/fastsimilarity_2d/smiles/{url_smiles}/property/CanonicalSMILES/JSON"
-        try:
-            reply = requests.get(
-                url,
-                params={"Threshold": int(similarity*100), "MaxRecords": 1000},
-                headers={"accept": "text/json"},
-                timeout=10,
-            )
-        except requests.exceptions.Timeout:
-            print("Pubchem seems to be down right now")
-            return []
+        for attempt in range(3):
+            try:
+                reply = requests.get(
+                    url,
+                    params={"Threshold": int(similarity*100), "MaxRecords": 1000},
+                    headers={"accept": "text/json"},
+                    timeout=10,
+                )
+                break
+            except requests.exceptions.RequestException:
+                if attempt < 2:
+                    time.sleep(3)
+                else:
+                    print("Pubchem seems to be down right now")
+                    return []
         try:
             data = reply.json()
             if "PropertyTable" not in data or "Properties" not in data["PropertyTable"]:
