@@ -2,7 +2,7 @@
 
 A simple sampler of the PubChem database using their API. It looks for similar molecules (similarity 0.7) to the input molecule and returns a list of maximum 100 molecules by default. This model has been developed by Ersilia and posts queries to an online server.
 
-This model was incorporated on 2023-08-10.Last packaged on 2025-12-01.
+This model was incorporated on 2023-08-10.Last packaged on 2026-03-20.
 
 ## Information
 ### Identifiers
@@ -44,18 +44,18 @@ _10 of 100 columns are shown_
 - **Source:** `Online`
 - **Source Type:** `External`
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos2hzy](https://hub.docker.com/r/ersiliaos/eos2hzy)
-- **Docker Architecture:** `AMD64`, `ARM64`
+- **Docker Architecture:** `AMD64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2hzy.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2hzy.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `1`
 - **Environment Size (Mb):** `443`
-- **Image Size (Mb):** `484.09`
+- **Image Size (Mb):** `486.4`
 
 **Computational Performance (seconds):**
-- 10 inputs: `30.99`
-- 100 inputs: `372.24`
-- 10000 inputs: `-1`
+- 10 inputs: `42.55`
+- 100 inputs: `388.2`
+- 10000 inputs: `1010.15`
 
 ### References
 - **Source Code**: [https://github.com/ersilia-os/chem-sampler/blob/main/chemsampler/samplers/pubchem/sampler.py](https://github.com/ersilia-os/chem-sampler/blob/main/chemsampler/samplers/pubchem/sampler.py)
