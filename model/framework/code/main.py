@@ -2,6 +2,7 @@
 import os
 import csv
 import sys
+from tqdm import tqdm
 from sampler import PubChemSampler
 
 
@@ -21,7 +22,7 @@ with open(input_file, "r") as f:
 # run model
 sampler = PubChemSampler()
 outputs = []
-for smi in smiles_list:
+for smi in tqdm(smiles_list, desc="Sampling"):
     o = sampler.sample(smi)
     outputs += [o]
 

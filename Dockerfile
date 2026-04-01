@@ -6,6 +6,7 @@ RUN pip install standardiser==0.1.9
 RUN pip install requests==2.31.0
 RUN pip install six==1.16
 RUN pip install numpy==1.24.4
+RUN pip install tqdm==4.67.1
 
 WORKDIR /repo
 COPY . /repo
