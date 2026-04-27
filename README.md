@@ -2,7 +2,7 @@
 
 A simple sampler of the PubChem database using their API. It looks for similar molecules (similarity 0.7) to the input molecule and returns a list of maximum 100 molecules by default. This model has been developed by Ersilia and posts queries to an online server.
 
-This model was incorporated on 2023-08-10.Last packaged on 2026-04-01.
+This model was incorporated on 2023-08-10.Last packaged on 2026-04-27.
 
 ## Information
 ### Identifiers
@@ -44,17 +44,17 @@ _10 of 100 columns are shown_
 - **Source:** `Online`
 - **Source Type:** `External`
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos2hzy](https://hub.docker.com/r/ersiliaos/eos2hzy)
-- **Docker Architecture:** `AMD64`
+- **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2hzy.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2hzy.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `1`
 - **Environment Size (Mb):** `444`
-- **Image Size (Mb):** `486.75`
+- **Image Size (Mb):** `494.25`
 
 **Computational Performance (seconds):**
-- 10 inputs: `37.29`
-- 100 inputs: `433.47`
+- 10 inputs: `41.41`
+- 100 inputs: `489.32`
 - 10000 inputs: `-1`
 
 ### References
