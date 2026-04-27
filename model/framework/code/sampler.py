@@ -31,7 +31,7 @@ class PubChemSampler(object):
     def _run_chemed(self, origin_smiles: str, similarity: float = 0.7):
         """Function adapted from Andrew White's Exmol"""
         url_smiles = urllib.parse.quote(origin_smiles)
-        url = f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/fastsimilarity_2d/smiles/{url_smiles}/property/CanonicalSMILES/JSON"
+        url = f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/fastsimilarity_2d/smiles/{url_smiles}/property/ConnectivitySMILES/JSON"
         for attempt in range(10):
             try:
                 reply = requests.get(
@@ -41,37 +41,33 @@ class PubChemSampler(object):
                     timeout=10,
                 )
             except requests.exceptions.RequestException as e:
-                # Network-level failure (timeout, DNS error, connection refused, etc.)
-                print(f"PubChem not accessible for compound '{origin_smiles}' (attempt {attempt+1}/10): {e}. Waiting 30s...")
-                time.sleep(30)
+                wait = min(5 * 2**attempt, 30)
+                print(f"PubChem not accessible for compound '{origin_smiles}' (attempt {attempt+1}/10): {e}. Waiting {wait}s...")
+                time.sleep(wait)
                 continue
 
             if reply.status_code == 429:
-                # Rate limit exceeded — PubChem allows ~5 requests/second; back off and retry
-                print(f"PubChem rate limit hit for compound '{origin_smiles}' (attempt {attempt+1}/10). Waiting 60s...")
-                time.sleep(60)
+                wait = int(reply.headers.get("Retry-After", min(5 * 2**attempt, 60)))
+                print(f"PubChem rate limit hit for compound '{origin_smiles}' (attempt {attempt+1}/10). Waiting {wait}s...")
+                time.sleep(wait)
                 continue
 
             if reply.status_code != 200:
-                # Unexpected HTTP error (e.g. 400 bad request, 500 server error) — no point retrying
                 print(f"PubChem returned HTTP {reply.status_code} for compound '{origin_smiles}'. Skipping.")
                 return []
 
-            # Successful response — parse and return
             try:
                 data = reply.json()
                 if "PropertyTable" not in data or "Properties" not in data["PropertyTable"]:
-                    # Valid response but no similar compounds found
                     return []
                 smiles = [d["ConnectivitySMILES"] for d in data["PropertyTable"]["Properties"]]
                 smiles = list(set(smiles))
+                time.sleep(1)  # proactive throttle: stay under PubChem's 5 req/s limit
                 return smiles
             except Exception as e:
-                # Response was not valid JSON or had unexpected structure
                 print(f"Failed to parse PubChem response for compound '{origin_smiles}': {e}. Skipping.")
                 return []
 
-        # All 10 attempts exhausted without a successful response
         print(f"PubChem unreachable after 10 attempts for compound '{origin_smiles}'. Giving up.")
         return []
     
