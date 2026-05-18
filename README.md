@@ -59,7 +59,7 @@ _10 of 100 columns are shown_
 
 ### References
 - **Source Code**: [https://github.com/ersilia-os/chem-sampler/blob/main/chemsampler/samplers/pubchem/sampler.py](https://github.com/ersilia-os/chem-sampler/blob/main/chemsampler/samplers/pubchem/sampler.py)
-- **Publication**: [https://academic.oup.com/nar/article/51/D1/D1373/6777787](https://academic.oup.com/nar/article/51/D1/D1373/6777787)
+- **Publication**: [https://doi.org/10.1093/nar/gkac956](https://doi.org/10.1093/nar/gkac956)
 - **Publication Type:** `Peer reviewed`
 - **Publication Year:** `2023`
 - **Ersilia Contributor:** [GemmaTuron](https://github.com/GemmaTuron)
