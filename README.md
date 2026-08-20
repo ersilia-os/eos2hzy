@@ -1,6 +1,6 @@
 # PubChem Molecular Sampler
 
-Returns 100 compounds from PubChem similar to a query, obtained through PubChem's two-dimensional fast similarity service. PubChem aggregates deposited chemical records at a scale far beyond curated bioactivity databases, so neighbours may include screening compounds, natural products and reagents rather than only drug-like chemistry. The request is issued to the public API at run time, meaning results follow the live database and depend on network availability rather than a bundled snapshot.
+A simple sampler of the PubChem database using their API. It looks for similar molecules (similarity 0.7) to the input molecule and returns a list of maximum 100 molecules by default. This model has been developed by Ersilia and posts queries to an online server.
 
 This model was incorporated on 2023-08-10.Last packaged on 2026-04-27.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2023-08-10.Last packaged on 2026-04-27.
 ### Output
 - **Output Dimension:** `100`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** List of 100 compounds from PubChem structurally similar to the query molecule.
+- **Interpretation:** Up to 100 nearest molecules in PubChem (similarity >0.7)
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
