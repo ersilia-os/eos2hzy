@@ -28,16 +28,16 @@ This model was incorporated on 2023-08-10.Last packaged on 2026-04-27.
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
 |------|------|-----------|-------------|
-| smiles_00 | string |  | Compound index 0 queried with the PubChem API |
-| smiles_01 | string |  | Compound index 1 queried with the PubChem API |
-| smiles_02 | string |  | Compound index 2 queried with the PubChem API |
-| smiles_03 | string |  | Compound index 3 queried with the PubChem API |
-| smiles_04 | string |  | Compound index 4 queried with the PubChem API |
-| smiles_05 | string |  | Compound index 5 queried with the PubChem API |
-| smiles_06 | string |  | Compound index 6 queried with the PubChem API |
-| smiles_07 | string |  | Compound index 7 queried with the PubChem API |
-| smiles_08 | string |  | Compound index 8 queried with the PubChem API |
-| smiles_09 | string |  | Compound index 9 queried with the PubChem API |
+| smi_00 | string |  | Compound index 0 queried with the PubChem API |
+| smi_01 | string |  | Compound index 1 queried with the PubChem API |
+| smi_02 | string |  | Compound index 2 queried with the PubChem API |
+| smi_03 | string |  | Compound index 3 queried with the PubChem API |
+| smi_04 | string |  | Compound index 4 queried with the PubChem API |
+| smi_05 | string |  | Compound index 5 queried with the PubChem API |
+| smi_06 | string |  | Compound index 6 queried with the PubChem API |
+| smi_07 | string |  | Compound index 7 queried with the PubChem API |
+| smi_08 | string |  | Compound index 8 queried with the PubChem API |
+| smi_09 | string |  | Compound index 9 queried with the PubChem API |
 
 _10 of 100 columns are shown_
 ### Source and Deployment
