@@ -1,7 +1,7 @@
 {
     "Identifier": "eos2hzy",
     "Slug": "pubchem-sampler",
-    "Status": "Ready",
+    "Status": "In maintenance",
     "Title": "PubChem Molecular Sampler",
     "Description": "A simple sampler of the PubChem database using their API. It looks for similar molecules (similarity 0.7) to the input molecule and returns a list of maximum 100 molecules by default. This model has been developed by Ersilia and posts queries to an online server.",
     "Deployment": [
