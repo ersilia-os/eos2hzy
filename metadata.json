@@ -1,7 +1,7 @@
 {
     "Identifier": "eos2hzy",
     "Slug": "pubchem-sampler",
-    "Status": "In maintenance",
+    "Status": "Ready",
     "Title": "PubChem Molecular Sampler",
     "Description": "A simple sampler of the PubChem database using their API. It looks for similar molecules (similarity 0.7) to the input molecule and returns a list of maximum 100 molecules by default. This model has been developed by Ersilia and posts queries to an online server.",
     "Deployment": [
@@ -37,7 +37,7 @@
     "License": "GPL-3.0-or-later",
     "Contributor": "GemmaTuron",
     "Incorporation Date": "2023-08-10",
-    "Last Packaging Date": "2026-04-27",
+    "Last Packaging Date": "2026-09-14",
     "Release": "v2.0.0",
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2hzy.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos2hzy",
@@ -47,10 +47,10 @@
     ],
     "Model Size": 1.0,
     "Environment Size": 446.0,
-    "Image Size": 494.25,
-    "Computational Performance 1": 41.41,
-    "Computational Performance 2": 75.34,
-    "Computational Performance 3": 489.32,
+    "Image Size": 492.53,
+    "Computational Performance 1": 33.85,
+    "Computational Performance 2": 64.19,
+    "Computational Performance 3": 463.3,
     "Computational Performance 4": -1.0,
     "Computational Performance 5": -1.0
 }
