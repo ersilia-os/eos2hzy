@@ -1,8 +1,9 @@
 # PubChem Molecular Sampler
 
-Returns up to 100 PubChem compounds similar to a query, retrieved through PubChem's two-dimensional fast similarity service at a 0.7 Tanimoto threshold and then ranked by Morgan fingerprint similarity to the input, with blanks where fewer neighbours exist. PubChem aggregates deposited chemical records far beyond curated bioactivity databases, so neighbours may include screening compounds, natural products and reagents rather than only drug-like chemistry. The query is issued live, so results track the current database and depend on network availability.
+Returns up to 100 PubChem compounds similar to a query, retrieved through PubChems two-dimensional fast similarity service at a 0.7 Tanimoto threshold and then ranked by Morgan fingerprint similarity to the input, with blanks where fewer neighbours exist. PubChem aggregates deposited chemical records far beyond curated bioactivity databases, so neighbours may include screening compounds, natural products and reagents rather than only drug-like chemistry. The query is issued live, so results track the current database and depend on network availability.
 
-This model was incorporated on 2023-08-10.Last packaged on 2026-09-14.
+This model was incorporated on 2023-08-10.
+Last packaged on 2026-09-14.
 
 ## Information
 ### Identifiers
@@ -46,6 +47,7 @@ _10 of 100 columns are shown_
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos2hzy](https://hub.docker.com/r/ersiliaos/eos2hzy)
 - **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2hzy.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2hzy.zip)
+- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos2hzy_v3.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos2hzy_v3.sif)
 
 ### Resource Consumption
 - **Model Size (Mb):** `1`
