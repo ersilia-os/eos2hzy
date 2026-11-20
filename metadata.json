@@ -3,7 +3,7 @@
     "Slug": "pubchem-sampler",
     "Status": "Ready",
     "Title": "PubChem Molecular Sampler",
-    "Description": "Returns up to 100 PubChem compounds similar to a query, retrieved through PubChem's two-dimensional fast similarity service at a 0.7 Tanimoto threshold and then ranked by Morgan fingerprint similarity to the input, with blanks where fewer neighbours exist. PubChem aggregates deposited chemical records far beyond curated bioactivity databases, so neighbours may include screening compounds, natural products and reagents rather than only drug-like chemistry. The query is issued live, so results track the current database and depend on network availability.",
+    "Description": "Returns up to 100 PubChem compounds similar to a query, retrieved through PubChems two-dimensional fast similarity service at a 0.7 Tanimoto threshold and then ranked by Morgan fingerprint similarity to the input, with blanks where fewer neighbours exist. PubChem aggregates deposited chemical records far beyond curated bioactivity databases, so neighbours may include screening compounds, natural products and reagents rather than only drug-like chemistry. The query is issued live, so results track the current database and depend on network availability.",
     "Deployment": [
         "Local"
     ],
@@ -38,7 +38,7 @@
     "Contributor": "GemmaTuron",
     "Incorporation Date": "2023-08-10",
     "Last Packaging Date": "2026-09-14",
-    "Release": "v2.0.0",
+    "Release": "v3.0.0",
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2hzy.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos2hzy",
     "Docker Architecture": [
